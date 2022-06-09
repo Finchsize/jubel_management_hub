@@ -63,11 +63,11 @@ export class AuthMockApi
         // @ Sign in - POST
         // -----------------------------------------------------------------------------------------------------
         this._fuseMockApiService
-            .onPost('api/auth/sign-in', 1500)
+            .onPost('api/auth/sign-in', 100)
             .reply(({request}) => {
 
                 // Sign in successful
-                if ( request.body.email === 'hughes.brian@company.com' && request.body.password === 'admin' )
+                if ( request.body.email === 'test@gmail.com' && request.body.password === 'test' )
                 {
                     return [
                         200,
@@ -122,7 +122,7 @@ export class AuthMockApi
         // @ Sign up - POST
         // -----------------------------------------------------------------------------------------------------
         this._fuseMockApiService
-            .onPost('api/auth/sign-up', 1500)
+            .onPost('api/auth/sign-up', 100)
             .reply(() =>
 
                 // Simply return true
